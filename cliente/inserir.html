@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script>
+		//carregar a lista de categorias
+		$(document).ready(function(){
+			$("#inserir").click(function(){
+				let dados = {
+								nome: $("#nome").val() ,
+								descricao: $("#descricao").val()
+							};
+				$.ajax({
+					url: "http://localhost/Webservices/final/api/categoria.php",
+					data: JSON.stringify(dados),
+					type: 'POST',
+					dataType: 'JSON',
+					success: function(resposta){
+						console.log(resposta);
+						window.location.href="index.html";
+					}	
+				});
+			});
+		})
+	</script>
+</head>
+<body>
+	nome <input type="text" id="nome">
+	descricao <input type="text" id="descricao">
+	<button id="inserir">Gravar</button>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script>
+		//carregar a lista de categorias
+		$(document).ready(function(){
+			$.getJSON("http://localhost/Webservices/final/api/categoria.php", function(resposta){
+				$.each(resposta, function(key, categoria){
+					$('#categorias').append('<li>'+categoria.nome+'</li>');
+				})
+			})
+		})
+
+
+	</script>
+</head>
+<body>
+	<a href="inserir.html">Inserir Categoria</a>
+	<ul id="categorias"></ul>
+</body>
+</html>

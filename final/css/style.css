@@ -1,0 +1,42 @@
+main{
+    display: flex;
+}
+
+#menu-esquerdo{
+    background-color: #f2f2f2;
+    height: 100vh;
+    padding: 10px;
+}
+
+.menu-galerias, .menu-posts{
+    display: none;
+}
+
+#menu-esquerdo ul{
+    width: 20vw;
+    list-style-type: none;
+    padding: 0px;
+}
+
+#menu-esquerdo ul li ul{
+    padding-left: 10px;
+}
+
+#direita{
+    align-items: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.imagem-post{
+    width: 80%;
+}
+
+.imagem-post img{
+    width: 100%;
+}
+
+.ativo{
+    color: red;
+}
